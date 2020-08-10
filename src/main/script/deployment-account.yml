@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: account-service
   labels:
-    run: account-service
+    name: account-service
 spec:
   replicas: 1
   selector:
@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        run: account-service
+        name: account-service
     spec:
       containers:
       - name: account-service
