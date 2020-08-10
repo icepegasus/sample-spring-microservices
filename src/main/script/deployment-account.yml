@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: account-service
-        image: piomin/account-service
+        image: gcr.io/icepegasus/account-service
         ports:
         - containerPort: 2222
           protocol: TCP

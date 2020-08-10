@@ -7,7 +7,7 @@ spec:
     serviceName: default-http-backend
     servicePort: 80
   rules:
-  - host: micro.all
+  - host: icepegasus.gcp.com
     http:
       paths:
       - path: /account
