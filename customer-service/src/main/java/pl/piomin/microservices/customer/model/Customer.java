@@ -2,10 +2,13 @@ package pl.piomin.microservices.customer.model;
 
 import java.util.List;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-@Document(collection = "customer")
+
+
+
+@Entity
 public class Customer {
 
 	@Id
@@ -13,7 +16,7 @@ public class Customer {
 	private String pesel;
 	private String name;
 	private CustomerType type;
-	private List<Account> accounts;
+//	private List<Account> accounts;
 
 	public Customer() {
 		
@@ -58,12 +61,6 @@ public class Customer {
 		this.type = type;
 	}
 
-	public List<Account> getAccounts() {
-		return accounts;
-	}
 
-	public void setAccounts(List<Account> accounts) {
-		this.accounts = accounts;
-	}
 
 }

@@ -34,7 +34,7 @@ public class Api {
 	}
 
 	@RequestMapping("/accounts")
-	public List<Account> findAll() {
+	public Iterable<Account> findAll() {
 		logger.info("Account.findAll()");
 		return repository.findAll();
 	}

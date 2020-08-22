@@ -2,6 +2,11 @@ package pl.piomin.microservices.customer.model;
 
 public class Account {
 
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", number=" + number + "]";
+	}
+
 	private String id;
 	private String number;
 

@@ -33,7 +33,7 @@ public class Api {
 	}
 	
 	@RequestMapping("/customers")
-	public List<Customer> findAll() {
+	public Iterable<Customer> findAll() {
 		logger.info("Customer.findAll()");
 		return repository.findAll();
 	}
@@ -43,7 +43,12 @@ public class Api {
 		logger.info(String.format("Customer.findById(%s)", id));
 		Customer customer = repository.findById(id);
 		List<Account> accounts =  accountClient.getAccounts(id);
-		customer.setAccounts(accounts);
+		
+		for(Account account :accounts  ) {
+			System.out.println(account.toString());
+		}
+		
+		//customer.setAccounts(accounts);
 		return customer;
 	}
 	

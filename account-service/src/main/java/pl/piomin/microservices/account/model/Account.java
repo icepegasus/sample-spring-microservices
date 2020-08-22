@@ -1,10 +1,17 @@
 package pl.piomin.microservices.account.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-@Document(collection = "account")
+
+
+@Entity
 public class Account {
+
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", customerId=" + customerId + ", number=" + number + "]";
+	}
 
 	@Id
 	private String id;
